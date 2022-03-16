@@ -82,6 +82,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 Constraints:
 1 <= num <= 3999
 
+site: https://leetcode.com/problems/integer-to-roman/
 
 3. Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
 The relative order of the elements may be changed.
@@ -130,3 +131,5 @@ Constraints:
 0 <= nums.length <= 100
 0 <= nums[i] <= 50
 0 <= val <= 100
+
+site: https://leetcode.com/problems/remove-element/
