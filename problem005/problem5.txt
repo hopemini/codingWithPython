@@ -19,3 +19,6 @@ Constraints:
 -10^4 <= x^n <= 10^4
 
 site: https://leetcode.com/problems/powx-n/
+
+2. 4-2(Implement strStr())를 find, index 를 사용하지 않고 구현하세요.
+
