@@ -17,7 +17,6 @@ def reverse(x):
             return ret
 
 
-print(123, reverse(123))
-print(-123, reverse(-123))
-print(120, reverse(120))
-print(1534236469, reverse(1534236469))
+x = [123, -123, 120, 1534236469]
+for i in x:
+    print(i, reverse(i))
