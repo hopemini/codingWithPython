@@ -1,8 +1,17 @@
 n, k = map(int, input().split())
 
-result = n % k
-while n != 1:
-    n = n // k
-    result += 1
+cnt = 0
+while True:
+    result = n % k
+    if result == 0:
+        n //= k
+        cnt += 1
+    else:
+        n -= result
+        cnt += result
+    if n < k:
+        break
 
-print(result)
+cnt += (n - 1)
+
+print(cnt)
