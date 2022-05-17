@@ -18,7 +18,7 @@ def bfs():
     d = ((-1, -2), (-2, -1), (-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2))
     chk = [ [0] * (M+1) for _ in range(N+1)]
     q.append((R, C, 0))
-    chk[3][5] = 1
+    chk[R][C] = 1
     while q:
         h, w, t = q.popleft()
         for dh, dw in d:
