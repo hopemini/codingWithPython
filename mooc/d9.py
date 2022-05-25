@@ -1,5 +1,5 @@
 import sys
-
+from collections import deque
 
 def Input_Data():
     readl = sys.stdin.readline
@@ -13,14 +13,21 @@ sol = -1
 N, height = Input_Data()
 
 # 여기서부터 작성
-cnt = 0
-for i in range(N):
-    for j in range(i+1, N):
-        if height[i] > height[j]:
-            cnt += 1
-        elif height[i] < height[j]:
-            break
+#cnt = 0
+#for i in range(N):
+#    for j in range(i+1, N):
+#        if height[i] > height[j]:
+#            cnt += 1
+#        else:
+#            break
 
-print(cnt)
+cnt = 0
+stack = deque()
+for h in height:
+    while stack and stack[-1] <= h:
+        stack.pop()
+    cnt += len(stack)
+    stack.append(h)
+sol = cnt
 # 출력하는 부분
 print(sol)
