@@ -1,5 +1,0 @@
-1. p.217 <1로 만들기>
-
-2. https://programmers.co.kr/learn/courses/30/lessons/42888
-
-3. https://www.acmicpc.net/problem/15686
