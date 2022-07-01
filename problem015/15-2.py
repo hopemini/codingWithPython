@@ -1,3 +1,4 @@
+from lib2to3.refactor import MultiprocessRefactoringTool
 import sys
 
 def InputData():
@@ -5,13 +6,18 @@ def InputData():
     N, M = map(int, readl().split())
     A = list(map(int, readl().split()))
     B = list(map(int, readl().split()))
-
     return N, M, A, B
 
-def Find(start) :
+def Find_1(start) :
     for i in range(M) :
         if B[i] != A[start + i] : return 0
     return 1
+
+def Find(start):
+    P = A[start:start+M]
+    P.sort()
+    P = list(map(lambda x:x-P[0], P))
+    return B == P
 
 def Solve():
     sol = 0
@@ -27,6 +33,9 @@ sol = 0
 # A: 실행 코드의 데이터
 # B: 바이러스의 데이터
 N, M, A, B = InputData()
+
+B.sort()
+B =list(map(lambda x:x-B[0], B))
 
 # 코드를 작성하세요
 sol = Solve()
