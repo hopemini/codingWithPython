@@ -11,13 +11,15 @@ ans = 0
 R = Input_Data()
 
 # 여기서부터 작성
-diag = 2**(1/2)
-i = 1
-while R > diag * i:
-    i += 1
-#i -= 1
-print(i)
-ans = i * i * 4
-
+R2 = R**2
+#for h in range(1, R+1):
+#    w = 0
+#    while w**2 + h**2 <= R2:
+#        w += 1
+#    ans += w -1
+for h in range(1, R+1):
+    h2 = h**2
+    ans += int((R2-h2) ** 0.5)
+ans *= 4
 # 출력하는 부분
 print(ans)
