@@ -12,11 +12,13 @@ sol = []
 N = Input_Data()
 
 # 여기서부터 작성
-q = deque()
-for i in range(N, 0, -1):
-    q.append(i)
+q = deque(range(1, N+1))
+while q:
+	rot = q[-1] // 2
+	for _ in range(rot):
+		q.append(q.popleft())
+	sol.append(q.popleft())
 
-print(q)
 
 # 출력하는 부분
 print(*sol)
