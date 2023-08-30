@@ -34,6 +34,17 @@ def bfs(y, x):
             q.append((ny, nx))
     return size
 
+def dfs(y, x):
+    global size
+    size += 1
+    map_apt[y][x] = 0
+    for dy, dx in d:
+        ny, nx = y+dy, x+dx
+        if not 0 <= ny < N: continue
+        if not 0 <= nx < N: continue
+        if map_apt[ny][nx] == 0: continue
+        dfs(ny, nx)
+    return size
 
 def Solve():
     global size
@@ -41,7 +52,9 @@ def Solve():
     for y in range(N):
         for x in range(N):
             if map_apt[y][x]:
+                #size = 0
                 size = bfs(y, x)
+                #size = dfs(y, x)
                 list_size.append(size)
     list_size.sort()
     return len(list_size), list_size
