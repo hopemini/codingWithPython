@@ -15,6 +15,21 @@ N, A = input_data()
 
 # 코드를 작성하세요
 def Solve():
+	
+	h = 0
+	for y in range(N):
+		sum = [0] * 2
+		for x in range(N):
+			sum[x%2] += A[y][x]
+		h += max(sum[0], sum[1])
+	v = 0
+	for x in range(N):
+		sum = [0] * 2
+		for y in range(N):
+			sum[y%2] += A[y][x]
+		v += max(sum[0], sum[1])
+	return max(h, v)
+
 	# even_sum = [sum(row[0::2]) for row in A]
 	# odd_sum = [sum(row[1::2])for row in A]
 	# sum1 = sum([max(i, j) for i, j in zip(odd_sum, even_sum)])
