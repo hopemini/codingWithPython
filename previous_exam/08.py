@@ -35,7 +35,8 @@ def bfs():
             if not 1 <= nx <= N: continue
             nc = c + map_cost[ny][nx]
             if nc >= sum[ny][nx]: continue
-            Q.append((ny, nx, nc))
+            #Q.append((ny, nx, nc))
+            heappush(Q, (ny, nx, nc))
             sum[ny][nx] = nc
     return sum[N][N]
 
