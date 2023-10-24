@@ -1,3 +1,6 @@
+## 협찬 해결
+## https://swedu.lge.com/learn/lecture/321/mooc-sw%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%97%AD%EB%9F%89%EC%9D%B8%EC%A6%9D%EC%8B%9C%ED%97%98-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-%ED%95%B4%EC%84%A4/lesson/8809/%EC%BD%94%EB%93%9C%EC%9D%B4%ED%95%B4-%ED%98%91%EC%B0%AC-%ED%95%B4%EA%B2%B0
+
 import sys
 
 def input_data() :

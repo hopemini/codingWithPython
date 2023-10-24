@@ -1,3 +1,6 @@
+## 건물옥상정원
+## https://swedu.lge.com/learn/lecture/321/mooc-sw%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%97%AD%EB%9F%89%EC%9D%B8%EC%A6%9D%EC%8B%9C%ED%97%98-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-%ED%95%B4%EC%84%A4/lesson/8813/%EA%B1%B4%EB%AC%BC%EC%98%A5%EC%83%81%EC%A0%95%EC%9B%90
+
 import sys
 
 def InputData():
