@@ -5,8 +5,9 @@ from collections import deque
 
 def direction_change(d, c):
     if c == 'L':
-        d = ()
+        d = (d-1) % 4
     else:
+        d = (d+1) % 4
     return d
 
 N = int(input())
@@ -24,22 +25,23 @@ for i in range(L):
 d = ((-1, 0), (0, -1), (1, 0), (0, 1)) # 아래, 왼, 위, 오른
 
 q = deque()
-board[1][1] = 2
-q.append((1, 1))
-direction = (0, 1)
+y, x = 1, 1
+board[y][x] = 2
+q.append((y, x))
+direction = 3
 t = 1
-while q:
-    y, x = y + direction[0], x + direction[1]
-    if not 1 <= x <= N: continue
-    if not 1 <= y <= N: continue
-    if board[y][x] == 2: continue
-    if not board[y][x] == 1:
-        dy, dx = q.popleft()
-        board[dy][dx] = 0
-    board[y][x] = 2
-    q.append((y, x))
-    if t in time.keys():
-        direction = direction_change(direction, time[t])
-    t += 1
+while True:
+    y, x = y + d[direction][0], x + d[direction][1]
+    if 1 <= x <= N and 1 <= y <= N and board[y][x] != 2:
+        if not board[y][x] == 1:
+            dy, dx = q.popleft()
+            board[dy][dx] = 0
+        board[y][x] = 2
+        q.append((y, x))
+        if t in time.keys():
+            direction = direction_change(direction, time[t])
+        t += 1
+    else:
+        break
 
 print(t)
